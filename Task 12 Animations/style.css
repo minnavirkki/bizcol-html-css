@@ -1,0 +1,244 @@
+:root {
+    --primary-color: radial-gradient(#ebebeb,#ffffff);
+    --secondary-color: radial-gradient(#ffb2ffe0,#ffffff00);
+    --background-grad: linear-gradient(90deg, #dff7bd, #40f2ec, #add2ed, #ffb2ff);
+}
+
+body {
+    background-image: var(--background-grad);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+p {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+}
+
+.first-task {
+    height: 100px;
+    width: 100px;
+    background-image: var(--primary-color);
+    border-radius: 50%;
+    transition: all 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-task:hover {
+    background: var(--secondary-color);
+    height: 150px;
+    width: 150px;
+}
+
+.second-task {
+    height: 100px;
+    width: 100px;
+    background: var(--secondary-color);
+    transition: all 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-task:hover {
+    transform: rotate(180deg);
+    background: var(--secondary-color);
+}
+
+.third-task {
+    height: 100px;
+    width: 100px;
+    background: var(--secondary-color);
+    transition: all 2s;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-task p {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.third-task:hover p {
+    opacity: 1;
+}
+
+.fourth-task {
+    display: inline-block;
+}
+
+.fourth-task p::after {
+    display: inline-block;
+    content: "";
+    margin-top: 5px;
+    height: 1px;
+    width: 0;
+    display: block;
+    background: #000;
+    transition: all 0.3s ease-in;
+}
+
+.fourth-task p:hover::after {
+    width: 100%;
+}
+
+/* Task 5 */
+
+.fifth-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    background: var(--secondary-color);
+}
+
+/* Top border */
+
+.fifth-task::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 200px;
+    border-top: 1px solid #333;
+    transition: all 1s;
+  }
+  
+.fifth-task:hover::before {
+    right: 0;
+}
+
+/* Right border */
+  
+.fifth-task::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-right: 1px solid #333;
+    transition: all 1s;
+}
+  
+.fifth-task:hover::after {
+    top: 0;
+}
+
+/* Bottom border */
+
+.fifth-task::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 200px;
+    right: 0;
+    border-bottom: 1px solid #000;
+    transition: all 1s;
+}
+  
+.fifth-task:hover::before {
+    left: 0;
+}
+
+/* Left border */
+
+.fifth-task::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    border-left: 1px solid #000;
+    transition: all 1s;
+}
+  
+.fifth-task:hover::after {
+    bottom: 0;
+}
+
+/* Task 6 — Animated Circle */
+
+.animated-circle {
+    background-image: var(--primary-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    z-index: 1;
+
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: 3;
+    text-align: center;
+}
+
+.animated-circle:hover {
+    animation-play-state: paused;
+}
+
+@keyframes example {
+    0% {
+        background: #dff7bd;
+        top: 0;
+        left: 0;
+    }
+    25% {
+        background: #40f2ec;
+        top: 0;
+        left: 200px;
+        border-radius: 50%;
+    }
+    50% {
+        background: #add2ed;
+        top: 200px;
+        left: 200px;
+        border-radius: 0;
+    }
+    75% {
+        background: #ffb2ff;
+        top: 200px;
+        left: 0px;
+        border-radius: 50%;
+    }
+    100% {
+        background: #ffb2ff;
+        top: 0px;
+        left: 0px;
+    }
+}

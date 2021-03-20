@@ -1,0 +1,64 @@
+body {
+    background: rgb(180, 86, 217);
+    background-image: url("https://source.unsplash.com/YeUVDKZWSZ4");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top left;
+    background-size: cover;
+    color: honeydew;
+
+}
+
+header {
+    background: white;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: square;
+    list-style-type: none;
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+li {
+    display: inline-block;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    padding: 20px 30px 40px 1+ px;
+    margin: 20px;
+}
+
+.box1 {
+    background-color: hotpink;
+    border: 1px solid #ffffff;
+}
+
+.box2 {
+    background-color: rgb(105, 255, 193);
+    border: 1px dotted #ffffff;
+}
+
+.box3 {
+    background-color: rgb(123, 105, 255);
+    border: 3px dashed #ffffff;
+}
+
+.box4 {
+    background-color: rgb(18, 0, 156);
+    
+    border-right: 10px groove #dd7e0b;
+    border-bottom: 1px solid #ffffff;
+    border-left: 5px double #f1203b;
+}
